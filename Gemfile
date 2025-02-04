@@ -13,6 +13,13 @@ gem 'sqlite3', '~> 1.4'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
+# Solves LoadErrors
+gem 'coveralls', require: false
+gem 'webmock', require: false
+
+# Solves Logger error for activesupport
+gem 'concurrent-ruby', '< 1.3.5'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
