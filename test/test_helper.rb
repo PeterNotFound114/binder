@@ -1,3 +1,12 @@
+# From GenAI: Set up mock LDAP to output mock data (I will share the full prompt when it works)
+# I tweaked it such that all code is modularized instead of just here in test_helper.rb
+require 'minitest/autorun'
+require 'active_ldap'
+require File.expand_path('../test/mocks/test_mock', __dir__)
+require File.expand_path('../test/mocks/active_ldap_mock', __dir__)
+include TestMock
+ActiveLdap::Base = ActiveLDAPMock
+
 # frozen_string_literal: true
 require 'coveralls'
 Coveralls.wear!('rails')
